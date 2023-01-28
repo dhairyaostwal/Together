@@ -3,11 +3,13 @@ import Credits from './components/Credits';
 import Instructions from './components/Instructions';
 import 'animate.css';
 import Button from './components/Button';
+import GithubTriangleCorner from './components/GithubTriangleCorner';
 
 function App() {
   return (
     <div>
       <div className="App animate__fadeIn" style={{ animationDuration: '2s' }}>
+        <GithubTriangleCorner />
         <h1 className="animate__bounceIn" style={{ animationDuration: '4s' }}>
           Together
         </h1>
@@ -22,7 +24,7 @@ function App() {
         />
 
         <Button />
-        <label className="">
+        <label>
           Upload your spreadsheet
           <br />
           Formats supported (.csv, .xlsx)
