@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Instructions from './components/Instructions';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App">
+        <h1>Together</h1>
+        <h3>
+          what better way to connect with your team members than to remember
+          their birthday
+        </h3>
+        <img
+          src="https://media0.giphy.com/media/qMgOScwHMtvIA/giphy.gif"
+          className="App-Img"
+        />
+
+        <button className="App-btn">Upload</button>
+        <label>
+          Upload your spreadsheet
+          <br />
+          Formats supported (.csv, .xlsx)
+        </label>
+      </div>
+      <Instructions />
     </div>
   );
 }

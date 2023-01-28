@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Unbounded:wght@600&display=swap');
+
+$bgcolor: #4b56d2;
+$fontcolor: #f1f6f5;
+$brand-font: 'Unbounded';
+$reg-font: 'Poppins';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bgcolor;
+  color: $fontcolor;
+  padding: 1% 3%;
+  font-family: $reg-font;
+  height: 100vh;
+}
+
+h1 {
+  font-family: $brand-font;
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  font-weight: 500;
+}
+
+.App-btn {
+  font-family: $reg-font;
+  font-size: 2rem;
+  padding: 1% 3%;
+  background-color: black;
+  color: #f1f6f5;
+  border: none;
+  border-radius: 20px 20px;
+  cursor: pointer;
+}
+
+.App-Img {
+  height: 300px;
+  margin-bottom: 2rem;
+}
+
+label {
+  opacity: 80%;
+}
