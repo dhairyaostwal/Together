@@ -1,12 +1,16 @@
 import './App.scss';
 import Credits from './components/Credits';
 import Instructions from './components/Instructions';
+import 'animate.css';
 
 function App() {
   return (
     <div>
-      <div className="App">
-        <h1>Together</h1>
+      <div className="App animate__fadeIn" style={{ animationDuration: '2s' }}>
+        <h1 className="animate__bounceIn" style={{ animationDuration: '4s' }}>
+          Together
+        </h1>
+
         <h3>
           what better way to connect with your team members than to remember
           their birthday
@@ -17,7 +21,7 @@ function App() {
         />
 
         <button className="App-btn">Upload</button>
-        <label>
+        <label className="">
           Upload your spreadsheet
           <br />
           Formats supported (.csv, .xlsx)
