@@ -1,4 +1,5 @@
 import './App.scss';
+import Credits from './components/Credits';
 import Instructions from './components/Instructions';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         </label>
       </div>
       <Instructions />
+      <Credits />
     </div>
   );
 }
