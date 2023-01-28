@@ -2,6 +2,7 @@ import './App.scss';
 import Credits from './components/Credits';
 import Instructions from './components/Instructions';
 import 'animate.css';
+import Button from './components/Button';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           className="App-Img"
         />
 
-        <button className="App-btn">Upload</button>
+        <Button />
         <label className="">
           Upload your spreadsheet
           <br />
