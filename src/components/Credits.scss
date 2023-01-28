@@ -10,7 +10,6 @@ $reg-font: 'Poppins';
   color: $font-color;
   font-size: 1.5rem;
   display: flex;
-  // flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: $reg-font;
@@ -21,4 +20,11 @@ $reg-font: 'Poppins';
 .Credits > p > span > a {
   text-decoration: none;
   color: $font-color;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .Credits{
+font-size: 1.2rem;
+  }
 }
