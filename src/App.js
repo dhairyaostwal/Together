@@ -15,7 +15,6 @@ function App() {
         <h1 className="animate__bounceIn" style={{ animationDuration: '4s' }}>
           Together
         </h1>
-
         <h3>
           what better way to connect with your team members than to remember
           their birthday
@@ -26,11 +25,6 @@ function App() {
           className="App-Img"
         />
         <Button />
-        <label>
-          Upload your spreadsheet
-          <br />
-          Formats supported (.csv, .xlsx)
-        </label>
       </div>
       <Instructions />
       <Credits />
