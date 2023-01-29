@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import '../App.scss';
 import Papa from 'papaparse';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Allowed extensions for input file
 const allowedExtensions = ['csv'];
@@ -9,7 +11,6 @@ export let nameData = [];
 export let dobData = [];
 
 const Button = () => {
-
   const [error, setError] = useState('');
 
   // It will store the file uploaded by the user
@@ -27,7 +28,18 @@ const Button = () => {
       // we show the error
       const fileExtension = inputFile?.type.split('/')[1];
       if (!allowedExtensions.includes(fileExtension)) {
-        setError('Please upload a csv file');
+        toast('Please upload a csv file', {
+          position: 'top-right',
+          autoClose: 1200,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+          type: 'error',
+        });
+        setError('');
         return;
       }
 
@@ -37,7 +49,22 @@ const Button = () => {
   };
 
   const handleParse = () => {
-    if (!file) return setError('Enter a valid file. Try again.');
+    if (!file)
+      
+      return (
+        toast('Enter a valid file. Try again.', {
+          position: 'top-right',
+          autoClose: 1200,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+          type: 'error',
+        }),
+      setError('')
+    );
 
     // Initialize a reader which allows user
     // to read any file or blob.
@@ -57,6 +84,17 @@ const Button = () => {
       }
     };
     reader.readAsText(file);
+    toast('Success!', {
+      position: 'top-right',
+      autoClose: 1200,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      type: 'success',
+    });
     setError('');
   };
 
@@ -73,10 +111,8 @@ const Button = () => {
           onClick={handleParse}
         />
       </div>
-      <br />
-      <div style={{ fontWeight: 600 }}>
-        {error && error}
-      </div>
+      {/* <br />
+      <div style={{ fontWeight: 600 }}>{error && error}</div> */}
     </div>
   );
 };
