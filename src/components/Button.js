@@ -50,7 +50,6 @@ const Button = () => {
 
   const handleParse = () => {
     if (!file)
-      
       return (
         toast('Enter a valid file. Try again.', {
           position: 'top-right',
@@ -63,8 +62,8 @@ const Button = () => {
           theme: 'colored',
           type: 'error',
         }),
-      setError('')
-    );
+        setError('')
+      );
 
     // Initialize a reader which allows user
     // to read any file or blob.
@@ -85,8 +84,8 @@ const Button = () => {
     };
     reader.readAsText(file);
 
-    localStorage.setItem("TogetherNameData", nameData);
-    localStorage.setItem("TogetherDOBData", dobData);
+    localStorage.setItem('TogetherNameData', nameData);
+    localStorage.setItem('TogetherDOBData', dobData);
 
     toast('Success!', {
       position: 'top-right',
@@ -100,21 +99,29 @@ const Button = () => {
       type: 'success',
     });
     setError('');
+    
   };
 
   return (
-    <div className="App-Btn-Container">
-      <div>
-        <input type={'file'} onChange={handleFileChange} />
+    <div className='App-Btn-Label-Container'>
+      <div className="App-Btn-Container">
+        <div>
+          <input type={'file'} onChange={handleFileChange} />
+        </div>
+        <div>
+          <input
+            type={'submit'}
+            value="Upload"
+            className="App-btn"
+            onClick={handleParse}
+          />
+        </div>
       </div>
-      <div>
-        <input
-          type={'submit'}
-          value="Upload"
-          className="App-btn"
-          onClick={handleParse}
-        />
-      </div>
+      <label>
+        Upload your spreadsheet
+        <br />
+        Formats supported (.csv, .xlsx)
+      </label>
     </div>
   );
 };
