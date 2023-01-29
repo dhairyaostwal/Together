@@ -16,8 +16,8 @@ const Instructions = () => {
           >
             <table>
               <tr>
-                <th>Full Name</th>
-                <th>DOB(MM/DD/YYYY)</th>
+                <th>FullName</th>
+                <th>DOB</th>
               </tr>
               <tr>
                 <td>Puneet Superstar</td>
@@ -33,6 +33,10 @@ const Instructions = () => {
               </tr>
             </table>
           </div>
+          <li>
+            <span style={{fontWeight:500}}>DOB must follow the MM/DD/YYYY format.</span><br/>This is done so as to be in
+            relation with Google Forms entry upload
+          </li>
           <li>Upload your spreadsheet</li>
           <li>Authenticate with Google OAuth</li>
           <li>Confirm with events added to your Google Calendar</li>
