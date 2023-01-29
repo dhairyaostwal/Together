@@ -3,6 +3,7 @@ import '../App.scss';
 import Papa from 'papaparse';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import GoogleOauth from '../controllers/GoogleOauth';
 
 // Allowed extensions for input file
 const allowedExtensions = ['csv'];
@@ -13,6 +14,7 @@ export let dobData = [];
 const Button = () => {
   // It will store the file uploaded by the user
   const [file, setFile] = useState('');
+  const [upload, clickedUpload] = useState(false);
 
   const handleFileChange = (e) => {
     // Check if user has entered the file
@@ -90,9 +92,13 @@ const Button = () => {
       theme: 'colored',
       type: 'success',
     });
+
+    clickedUpload(true);
   };
 
-  return (
+  return file && upload ? (
+    <GoogleOauth />
+  ) : (
     <div className="App-Btn-Label-Container">
       <div className="App-Btn-Container">
         <div>
