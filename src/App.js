@@ -20,9 +20,9 @@ function App() {
         </h3>
         <img
           src="https://media0.giphy.com/media/qMgOScwHMtvIA/giphy.gif"
+          alt=''
           className="App-Img"
         />
-
         <Button />
         <label>
           Upload your spreadsheet
