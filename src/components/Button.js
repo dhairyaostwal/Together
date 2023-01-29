@@ -76,14 +76,18 @@ const Button = () => {
       const csv = Papa.parse(target.result, { header: true });
       const parsedData = csv?.data;
 
-      for (var i = 0; i < parsedData.length; i++) {
-        let name = parsedData[i].FullName;
-        let dob = parsedData[i].DOB;
+      for (const element of parsedData) {
+        let name = element.FullName;
+        let dob = element.DOB;
         nameData.push(name);
         dobData.push(dob);
       }
     };
     reader.readAsText(file);
+
+    localStorage.setItem("TogetherNameData", nameData);
+    localStorage.setItem("TogetherDOBData", dobData);
+
     toast('Success!', {
       position: 'top-right',
       autoClose: 1200,
@@ -111,8 +115,6 @@ const Button = () => {
           onClick={handleParse}
         />
       </div>
-      {/* <br />
-      <div style={{ fontWeight: 600 }}>{error && error}</div> */}
     </div>
   );
 };
