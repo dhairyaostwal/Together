@@ -11,14 +11,10 @@ export let nameData = [];
 export let dobData = [];
 
 const Button = () => {
-  const [error, setError] = useState('');
-
   // It will store the file uploaded by the user
   const [file, setFile] = useState('');
 
   const handleFileChange = (e) => {
-    setError('');
-
     // Check if user has entered the file
     if (e.target.files.length) {
       const inputFile = e.target.files[0];
@@ -39,7 +35,6 @@ const Button = () => {
           theme: 'colored',
           type: 'error',
         });
-        setError('');
         return;
       }
 
@@ -50,20 +45,17 @@ const Button = () => {
 
   const handleParse = () => {
     if (!file)
-      return (
-        toast('Enter a valid file. Try again.', {
-          position: 'top-right',
-          autoClose: 1200,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'colored',
-          type: 'error',
-        }),
-        setError('')
-      );
+      return toast('Enter a valid file. Try again.', {
+        position: 'top-right',
+        autoClose: 1200,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        type: 'error',
+      });
 
     // Initialize a reader which allows user
     // to read any file or blob.
@@ -98,12 +90,10 @@ const Button = () => {
       theme: 'colored',
       type: 'success',
     });
-    setError('');
-    
   };
 
   return (
-    <div className='App-Btn-Label-Container'>
+    <div className="App-Btn-Label-Container">
       <div className="App-Btn-Container">
         <div>
           <input type={'file'} onChange={handleFileChange} />
