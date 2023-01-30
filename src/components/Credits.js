@@ -7,7 +7,7 @@ const Credits = () => {
       <p>
         Build with ❤️ by{' '}
         <span>
-          <a target="_blank" href="https://github.com/dhairyaostwal">
+          <a target="_blank" rel="noreferrer" href="https://github.com/dhairyaostwal">
             {' '}
             Dhairya Ostwal
           </a>
