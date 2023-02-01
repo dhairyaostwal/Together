@@ -6,6 +6,6 @@ Bringing Teams Together
 
 ## Special Mention
 
-1. [Commit 22](https://github.com/dhairyaostwal/Together/commit/e87d420dc72c83d57b84c516606598a96e604f2b) titled as **`⚡️ Introduced ProdMgt Learning, shall cover in README`** - In a Product Management webinar around 2021 if I remember rightly, the speaker mentioned how one could use sign-in in a rightful manner so that it doesn't become challenge in user growth. The speaker gave example of *TikTok* app which showed user all the functionality then asked for account creation. I'm happy using `useState` and `ternary operators` I could incorporate the same. 
+1. [Commit 22](https://github.com/dhairyaostwal/Together/commit/e87d420dc72c83d57b84c516606598a96e604f2b) titled as **⚡️ Introduced ProdMgt Learning, shall cover in README** - In a Product Management webinar around 2021 if I remember rightly, the speaker mentioned how one could use sign-in in a rightful manner so that it doesn't become challenge in user growth. The speaker gave example of *TikTok* app which showed user all the functionality then asked for account creation. I'm happy using `useState` and `ternary operators` I could incorporate the same. 
 
 Blog post soon :tada:
