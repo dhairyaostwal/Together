@@ -85,8 +85,8 @@ const SupabaseGoogleOauth = (nameData, dobData) => {
   // console.log('Session: ', session);
 
   return session ? (
-    <div>
-      <h2>Hey there {session.user.user_metadata.name}</h2>
+    <div className='App-Create-Event-Button'>
+      <h2>Hey, {session.user.user_metadata.name}</h2>
       <button className="App-btn" onClick={() => createGoogleCalendarEvent()}>
         Create Google Calendar Events
       </button>
