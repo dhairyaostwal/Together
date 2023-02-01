@@ -3,7 +3,7 @@ import '../App.scss';
 import Papa from 'papaparse';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import GoogleOauth from '../controllers/GoogleOauth';
+import SupabaseGoogleOauth from '../controllers/SupabaseGoogleOauth';
 
 // Allowed extensions for input file
 const allowedExtensions = ['csv'];
@@ -97,7 +97,7 @@ const Button = () => {
   };
 
   return file && upload ? (
-    <GoogleOauth />
+    <SupabaseGoogleOauth nameData={nameData} dobData={dobData} />
   ) : (
     <div className="App-Btn-Label-Container">
       <div className="App-Btn-Container">
