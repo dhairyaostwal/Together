@@ -81,7 +81,7 @@ const Button = () => {
     localStorage.setItem('TogetherNameData', nameData);
     localStorage.setItem('TogetherDOBData', dobData);
 
-    toast('Success!', {
+    toast('Uploaded data saved!', {
       position: 'top-right',
       autoClose: 1200,
       hideProgressBar: true,
@@ -116,7 +116,7 @@ const Button = () => {
       <label>
         Upload your spreadsheet
         <br />
-        Formats supported (.csv, .xlsx)
+        Formats supported (.csv)
       </label>
     </div>
   );
